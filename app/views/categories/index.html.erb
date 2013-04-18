@@ -1,0 +1,29 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+ <% @categories.each do |a| %>
+     <br><%= link_to a.name, category_recipes_path(a.id)%>
+
+     
+      <%= link_to 'Edit', edit_category_path(a) %></td>
+      <%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+      
+
+ <%end%>
+
+
+
+<%= link_to 'New Category', new_category_path %>
+
+
+
+
+
+      

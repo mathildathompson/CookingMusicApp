@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <b>Name:</b>
+  <% @category.recipes.each do |x| %>
+
+  <%= x.name %>
+  <%= x.method %>
+  <img src = "<%= x.image_url%>"/>
+  <%end%>
+</div>
+
+<!-- <div>
+  <b>Method:</b>
+  <%#= @recipe.method %>
+  <img src="<%#=@recipe.image_url%>"/>
+</div> -->
+
+
+<div>
+<%#= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%#= link_to 'Back', recipes_path %>
+</div>
+
