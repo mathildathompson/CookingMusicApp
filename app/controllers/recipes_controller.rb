@@ -17,6 +17,11 @@ class RecipesController < ApplicationController
   # GET /recipes/1.json
   def show
     @category = Category.find(params[:category_id])
+    @recipe = Recipe.find(params[:id])
+
+    @all_tracks_recipe = Track.includes(:recipes => :category).where('categories.id = ? and recipes.id = ?', @category.id, @recipe.id)
+    # @recipe.tracks
+    # @recipe = Recipe.find(params[:id]
     # @category.recipes
 
     respond_to do |format|

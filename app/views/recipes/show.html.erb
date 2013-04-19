@@ -10,6 +10,12 @@
   <%end%>
 </div>
 
+<% @all_tracks_recipe.each do |track| %>
+	<div>
+		
+		<%= track.sound_cloud_player.html_safe %>
+	</div>
+<% end %>
 <!-- <div>
   <b>Method:</b>
   <%#= @recipe.method %>

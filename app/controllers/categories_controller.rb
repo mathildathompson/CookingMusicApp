@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
-    @tracks = Track.includes(:recipes => :category).where('categories.id = ?', @category.id)
+    @recipe.tracks
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @category }
