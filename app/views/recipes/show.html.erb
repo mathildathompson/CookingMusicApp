@@ -1,30 +1,48 @@
-<p id="notice"><%= notice %></p>
+<html style = "background-image:url('http://www.matthewsheartsofhope.org/images/blankBackground.jpg')";>
 
-<div>
-  <b>Name:</b>
-  <% @category.recipes.each do |x| %>
+    <p id="notice"><%= notice %></p>
 
-  <%= x.name %>
-  <%= x.method %>
-  <img src = "<%= x.image_url%>"/>
-  <%end%>
-</div>
+    <div class = "name">
+          <% @category.recipes.each do |x| %>
 
-<% @all_tracks_recipe.each do |track| %>
-	<div>
-		
-		<%= track.sound_cloud_player.html_safe %>
-	</div>
-<% end %>
-<!-- <div>
-  <b>Method:</b>
-  <%#= @recipe.method %>
-  <img src="<%#=@recipe.image_url%>"/>
-</div> -->
+          <h2><%= x.name %></h2>
+          <h5>Method:</h5>
+          <%= x.method %>
+          <%end%>
+    </div>
+
+    <div id = "image">
+          <% @category.recipes.each do |x| %>
+          <br><img src = "<%= x.image_url%>"/></br>
+          <%end%>
+    </div>
+
+    <div class = "ingredient">
+        <h3>Ingredients:</h3>
+        <% @recipe.ingredients.each do |x| %>
+          <table>
+             <tr> <%= x.name %> </tr>
+          </table>
+        <%end%>
+    </div>
 
 
-<div>
+    </div class = "track">
+      <!--   <h3>Recommended Playlist:</h3> -->
+        <% @all_tracks_recipe.each do |track| %>
+        	
+        <br><%= track.sound_cloud_player.html_safe %></br>
+    	  <% end %>
+    </div>
+    <!-- <div>
+      <b>Method:</b>
+      <%#= @recipe.method %>
+      <img src="<%#=@recipe.image_url%>"/>
+    </div> -->
+
+
+    <div>
 <%#= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%#= link_to 'Back', recipes_path %>
 </div>
-
+</html>
