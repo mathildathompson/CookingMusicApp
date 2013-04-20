@@ -3,45 +3,51 @@
 	    font-color: grey;
         }
 
-.track {
-	    clear: right;
-      float: right;
-      }
-       
 iframe {
 	   clear: right;
        float: right;
        width: 40%;
       height: 30%;
-      margin: 10px;}
+      margin: 10px 25px 10px 0px;}
 
 .name {
 	  float:left;
 	  text-align: left;
-    margin-left: 20px;
-	  
-      }
+    margin-left: 80px;
+    width: 600px;
+    /*display:inline-block;*/
+    }
 
 .ingredient
     {
     float:left;
     clear:left;
     text-align: left;
-    width: 500px;
+    width: 600px;
     font-size: 30px;
-    margin-left: 20px;
+    margin-left: 80px;
+    display:block;
     }
 
 img {
-    float:right;
-    margin-right:150px;
+    float:left;
     height: 300px;
     width: auto;
-    border: 5px black;}
+    clear:left;
+    }
 
 #image{
     border: 2px black;
       }
+
+.return{
+    margin-top: 500px
+       }
+
+.return2{
+       margin-top: 800px;
+       text-align:center;
+}
 
 /** {
   border: 1px dashed blue;

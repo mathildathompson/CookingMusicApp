@@ -3,21 +3,14 @@
     <p id="notice"><%= notice %></p>
 
     <div class = "name">
-          <% @category.recipes.each do |x| %>
-
-          <h2><%= x.name %></h2>
-          <h5>Method:</h5>
-          <%= x.method %>
-          <%end%>
+          
+            <br><h3><%=@recipe.name%></h3>
+            Method:
+            </br><%=@recipe.method%>
+          
     </div>
 
-    <div id = "image">
-          <% @category.recipes.each do |x| %>
-          <br><img src = "<%= x.image_url%>"/></br>
-          <%end%>
-    </div>
-
-    <div class = "ingredient">
+     <div class = "ingredient">
         <h3>Ingredients:</h3>
         <% @recipe.ingredients.each do |x| %>
           <table>
@@ -26,14 +19,22 @@
         <%end%>
     </div>
 
-
     </div class = "track">
-      <!--   <h3>Recommended Playlist:</h3> -->
         <% @all_tracks_recipe.each do |track| %>
-        	
         <br><%= track.sound_cloud_player.html_safe %></br>
-    	  <% end %>
+        <% end %>
     </div>
+
+  <div>
+      <!-- <img src = "<%=@recipe.image_url%>"%>" -->
+  </div>
+
+  <div class = "return2">
+      <h4><%= link_to 'Back', category_recipes_path(@category)%></h4>
+  </div>
+
+
+    
     <!-- <div>
       <b>Method:</b>
       <%#= @recipe.method %>

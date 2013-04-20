@@ -3,7 +3,11 @@
 .index {
        
        font-size: 60px;
-       color: #3939b8;
+       color: black;
+       a:link;
+       a:visited;
+       a:hover;
+       a:active;
        
 
        /*margin-top: 50px;*/
@@ -13,9 +17,10 @@
 .content{
 	text-align: center;
       size: 60px;
-      color: rgb(57, 57, 184);
+      color: black;
       font-family: times;
       font-size: 30px;
+      height: 50px;
       }
 
 /*img {
