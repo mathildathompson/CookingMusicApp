@@ -1,3 +1,26 @@
+.container{
+          clear:both;
+          }
+
+.float_left{
+           float:left;
+           width:40%;
+           margin-left: 70px;
+           }
+
+.float_right{
+          float:right;
+          width:40%;
+           }
+
+
+
+
+
+
+
+
+
 .choose {
 	    margin-top: 30px;
 	    font-color: grey;
@@ -6,16 +29,15 @@
 iframe {
 	   clear: right;
        float: right;
-       width: 40%;
-      height: 30%;
-      margin: 10px 25px 10px 0px;}
+      margin: 5px 25px 5px 0px;
+      }
 
 .name {
-	  float:left;
+	  
 	  text-align: left;
-    margin-left: 80px;
     width: 600px;
-    /*display:inline-block;*/
+    height: 300px;
+   
     }
 
 .ingredient
@@ -25,8 +47,9 @@ iframe {
     text-align: left;
     width: 600px;
     font-size: 30px;
-    margin-left: 80px;
     display:block;
+    height: 350px;
+   
     }
 
 img {
@@ -47,8 +70,8 @@ img {
 .return2{
        margin-top: 800px;
        text-align:center;
+       clear:both;
 }
-
 /** {
-  border: 1px dashed blue;
+  border: 1px solid black;
 }*/

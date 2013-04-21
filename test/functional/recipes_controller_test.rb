@@ -2,13 +2,17 @@ require 'test_helper'
 
 class RecipesControllerTest < ActionController::TestCase
   setup do
+
     @recipe = recipes(:one)
+    @recipe.category = category(:one)
+
   end
 
   test "should get index" do
     get :index
     assert_response :success
     assert_not_nil assigns(:recipes)
+    assert_not_nit assigns(:category)
   end
 
   test "should get new" do
@@ -27,6 +31,8 @@ class RecipesControllerTest < ActionController::TestCase
   test "should show recipe" do
     get :show, id: @recipe
     assert_response :success
+    assert_not_nit assigns(:category)
+    assert_not_nil assigns(:all_tracks_recipe)
   end
 
   test "should get edit" do
