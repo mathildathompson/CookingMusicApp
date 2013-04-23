@@ -2,10 +2,9 @@ require 'test_helper'
 
 class RecipesControllerTest < ActionController::TestCase
   setup do
-
-    @recipe = recipes(:one)
-    @recipe.category = category(:one)
-
+    @recipe = Recipe.new(:name => "Pasta", :method => "Put in boiling water", :image => "http://www.cookingclassy.com/wp-content/uploads/2012/11/browned+butter+lemon+pasta3.jpg", :category_id => 1)
+    @recipe.category = Category.new(:name => "Italien")
+    @recipe.save
   end
 
   test "should get index" do
