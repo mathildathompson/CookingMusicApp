@@ -1,5 +1,15 @@
 <!-- <html style = "background-image:url('http://www.matthewsheartsofhope.org/images/blankBackground.jpg')";> -->
 
+<div class='navbar'>
+      <div class='backbutton'>
+         <h4><%= link_to 'Back', category_recipes_path(@category)%></h4>
+      </div>
+
+      <div class='cookingwithmusic'>
+        <h2> COOKING WITH MUSIC </h2>
+      </div>
+</div>
+
     <p id="notice"><%= notice %></p>
     
     <div class = "container">
@@ -34,10 +44,6 @@
               <br><%= track.sound_cloud_player.html_safe %></br>
               <% end %>
           </div>
-        </div>
-
-        <div class = "return2">
-            <h4><%= link_to 'Back', category_recipes_path(@category)%></h4>
         </div>
 
 
