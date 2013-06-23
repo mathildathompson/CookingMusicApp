@@ -1,0 +1,20 @@
+ <div class="extend-form">
+     <h4>Click to create a comment</h4>
+  </div>
+
+ <div class="extendible-form">
+ 
+        <%= form_for Comment.new(:recipe_id => @recipe.id), :remote => true do |f| %>
+
+      <%= f.hidden_field :recipe_id %>
+
+      <div class="field" id='clearsearch' value=''>
+          <%= f.text_area :body %>
+      </div>
+
+      <div class="field">
+         <%= f.submit %>
+      </div>
+
+     <% end %>
+ </div>

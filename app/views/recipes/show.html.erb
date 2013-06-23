@@ -35,6 +35,18 @@
                     <h3>Method:</h3>
                     <h5><%=@recipe.method%><h5>
               </div>
+
+              <div id="commentsbox" class="comments<%=@recipe.id%>">
+                <% @recipe.comments.each do |comment| %>
+                <%= render comment %>
+                   <% end %>
+              </div>
+
+              <div class='form'>
+              <%= render :partial => 'comments/form', :locals => { :recipe => @recipe } %>
+              </div>
+
+              </div>
         </div>
 
         <div class = "float_right">

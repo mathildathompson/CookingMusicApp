@@ -17,6 +17,8 @@ CookingMusicApp::Application.routes.draw do
 
   resources :recipes
 
+  resources :comments, only: [:index, :new, :create]
+
   resources :sessions, only: [:new, :create]
 
 
