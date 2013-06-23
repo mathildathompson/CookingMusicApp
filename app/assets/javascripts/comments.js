@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+$('input').addClass('commentbutton');
+
 
 $('body').bind('ajax:success', function(e, cool_beans) {
     //remember cool_beans is a div, so you are putting a div inside a temporary div and accessing children() 

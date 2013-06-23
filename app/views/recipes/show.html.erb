@@ -37,6 +37,7 @@
               </div>
 
               <div id="commentsbox" class="comments<%=@recipe.id%>">
+                <h4>Comments:</h4>
                 <% @recipe.comments.each do |comment| %>
                 <%= render comment %>
                    <% end %>
