@@ -1,4 +1,4 @@
-<html style = "background-image:url('http://www.matthewsheartsofhope.org/images/blankBackground.jpg')";>
+<!-- <html style = "background-image:url('http://www.matthewsheartsofhope.org/images/blankBackground.jpg')";> -->
 
     <p id="notice"><%= notice %></p>
     
@@ -7,25 +7,23 @@
        <div class = "float_left">
 
               <div class = "name">
-                    
-                      <h2 style = "color:purple;"><%=@recipe.name%></h2>
-                    
-                      <h3>Method</h3>
-                      <h5><%=@recipe.method%><h5>
-                    
+                <h2><%=@recipe.name%></h2>
               </div>
 
                <div class = "ingredient">
-                  <h3>Ingredients:</h3>
+                  <h5>Ingredients:</h5>
                   <% @recipe.ingredients.each do |x| %>
-                    <table>
-                       <tr> <%= x.name %> </tr>
-                    </table>
+                    <li><%= x.name %></li>
+              
                   <%end%>
               </div>
-
               <div>
-               <img src = "<%=@recipe.image_url%>"%>
+                <%= image_tag @recipe.image_url, :class => 'image'%>
+              </div>
+
+              <div class = "method">
+                    <h3>Method:</h3>
+                    <h5><%=@recipe.method%><h5>
               </div>
         </div>
 
@@ -38,12 +36,11 @@
           </div>
         </div>
 
-  </div>
+        <div class = "return2">
+            <h4><%= link_to 'Back', category_recipes_path(@category)%></h4>
+        </div>
 
- 
 
-  <div class = "return2">
-      <h4><%= link_to 'Back', category_recipes_path(@category)%></h4>
   </div>
 
 
@@ -55,8 +52,8 @@
     </div> -->
 
 
-    <div>
+<!--     <div>
 <%#= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%#= link_to 'Back', recipes_path %>
-</div>
-</html>
+</div> -->
+<!-- </html> -->

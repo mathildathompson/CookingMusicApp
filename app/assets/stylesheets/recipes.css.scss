@@ -1,67 +1,83 @@
+*{
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+  .choosearecipe{
+        text-align: center;
+        margin-top:20px;
+        font-size: 8px;
+        h1{
+          font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+        }
+        // font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
 .container{
           clear:both;
           }
 
 .float_left{
            float:left;
-           width:40%;
+           width:60%;
            margin-left: 70px;
            }
 
 .float_right{
           float:right;
-          width:40%;
+          width:30%;
            }
-
-
-
-
-
-
-
-
 
 .choose {
 	    margin-top: 30px;
 	    font-color: grey;
+      text-align: center;
+      font-size: 25px;
         }
 
 iframe {
 	   clear: right;
        float: right;
       margin: 5px 25px 5px 0px;
+      height:85px;
       }
 
 .name {
-	  
+	  height:12px;
 	  text-align: left;
     width: 600px;
-    height: 300px;
+    margin-bottom:40px;
    
     }
 
+.name h2{
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
 .ingredient
     {
-    float:left;
-    clear:left;
     text-align: left;
-    width: 600px;
-    font-size: 30px;
-    display:block;
-    height: 350px;
-   
+    width: 400px;
+    font-size: 15px;
+    height: 200px;
+    float:left;
+     
+      h5{
+       font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+      }
     }
 
 img {
     float:left;
-    height: 300px;
-    width: auto;
-    clear:left;
+    height: 250px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    // clear:both
     }
 
 #image{
     border: 2px black;
       }
+
 
 .return{
     margin-top: 500px
@@ -71,6 +87,22 @@ img {
        margin-top: 800px;
        text-align:center;
        clear:both;
+}
+
+.method{
+  clear:both;
+  width:91%;
+  h3{
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    // margin-top:310px;
+  }
+  h5{
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  }
+}
+
+.track h4{
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
 }
 /** {
   border: 1px solid black;

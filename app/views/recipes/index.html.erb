@@ -1,12 +1,13 @@
-<h1 style = "font-family: times;
-font-size: 30px; color:purple;">Choose a recipe</h1>
+<div class='choosearecipe'>
+  <h1>CHOOSE A RECIPE</h1>
+</div>
 
 
  <div class = "choose">
         <% @category.recipes.each do |recipe| %>
         <tr>
         <br>
-        <td><%= link_to recipe.name, category_recipe_path(recipe.category_id, recipe.id) %></td>
+        <td><%= link_to recipe.name, category_recipe_path(recipe.category_id, recipe.id), :class => 'choose' %></td>
         </br>
        <!--  <td><%= recipe.method %></td> -->
         
@@ -20,5 +21,7 @@ font-size: 30px; color:purple;">Choose a recipe</h1>
         <h4><%= link_to 'Back', categories_path %></h4>
 
     </div>
+
+
 
 <%#= link_to 'New Recipe', new_recipe_path %>

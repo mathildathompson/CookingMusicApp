@@ -1,4 +1,13 @@
 CookingMusicApp::Application.routes.draw do
+  # devise_for :installs
+
+  get "sessions/new"
+
+  resources :users
+
+  get "recipes/callback"
+
+
   resources :categories do
    resources :recipes
  end
@@ -7,6 +16,8 @@ CookingMusicApp::Application.routes.draw do
 
 
   resources :recipes
+
+  resources :sessions, only: [:new, :create]
 
 
   # The priority is based upon order of creation:

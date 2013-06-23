@@ -1,18 +1,23 @@
+*{
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
 
+.catchphrase{
+  margin-top:20px;
+  text-align: center;
+  h4{
+    font-style:italic;
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  }
+}
 
-.index {
-       
-       font-size: 60px;
-       color: black;
-       a:link;
-       a:visited;
-       a:hover;
-       a:active;
-       
-
-       /*margin-top: 50px;*/
-       
-       }
+.chooseacuisine{
+  text-align:center;
+  h3{
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    margin-top:20px;
+  }
+}
 
 .content{
 	text-align: center;
@@ -20,8 +25,37 @@
       color: black;
       font-family: times;
       font-size: 30px;
-      height: 50px;
+      // height: 500px;
       }
+
+.categorynames{
+      margin:20px;
+      margin-left:73px;
+      text-decoration:none;
+      float:left;
+      font-size:1.5em;
+
+      }
+
+.navbar{
+  height:50px;
+  background-color:lightgrey;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+    h2{
+      text-align:center;
+      font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+   }
+}
+
+.carosel{
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /*img {
       margin-top: 15px;
@@ -30,12 +64,24 @@
       width: 800px;
      }*/
 
-html {
-      background-image:url('http://www.souschef.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/h/chilli-de-arbol.jpg');
-}
 
-div {
-    border: 1px black;
-    }
+      
+      
+//       html { 
+//   background: url('/grain.jpg') no-repeat center center fixed; 
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+// .background{
+// //   background-image: url('/souschefcakes.jpg');
+// // }
+      
+
+
+// div {
+//     border: 1px black;
+//     }
 
 

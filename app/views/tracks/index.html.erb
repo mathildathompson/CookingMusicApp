@@ -25,3 +25,12 @@
 <br />
 
 <%= link_to 'New Track', new_track_path %>
+
+
+ pry(#<TracksController>)> @yummlyrecipe['matches'][0]['smallImageUrls']
+=> ["http://i.yummly.com/Baked-pesto-chicken-309449-273902.s.jpg"]
+[46] pry(#<TracksController>)> @yummlyrecipe['matches'][0]['ingredients']
+=> ["low-fat mozzarella cheese", "breast", "pesto", "salt", "ground black pepper"]
+[47] pry(#<TracksController>)> @yummlyrecipe['matches'][0]['recipeName']
+=> "Baked Pesto Chicken"
+[48] pry(#<TracksController>)> 

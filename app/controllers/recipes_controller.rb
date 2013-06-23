@@ -3,16 +3,24 @@ class RecipesController < ApplicationController
  before_filter :load_recipe, :only => [:show, :edit, :update, :destroy]
     def load_recipe
       @recipe = Recipe.find(params[:id])
+      
  end
   
   def index
-     @category= Category.find(params[:category_id])
+    @category= Category.find(params[:category_id])
+    @tracks = Track.all
+  
   end
 
   
   def show
     @category = Category.find(params[:category_id])
     @all_tracks_recipe = Track.includes(:recipes => :category).where('categories.id = ? and recipes.id = ?', @category.id, @recipe.id)
+    # @yummlyrecipe1 = Recipe.search('pasta')
+    # # binding.pry
+    # @ingredients = @yummlyrecipe1['matches'][0]['ingredients']
+    # # binding.pry
+    # @yummlyrecipe2 = Recipe.search('snails')
     
    end
 
