@@ -14,9 +14,9 @@ $('body').bind('ajax:success', function(e, cool_beans) {
     $('.comments' + new_comment).append(cool_beans);
       });
 
-$('.comment').hide();
+$('.hideunlessclicked').hide();
 $('#commentsbox h5').click(function(){
-    $('.comment').slideToggle('slow', function(){
+    $('.hideunlessclicked').slideToggle('slow', function(){
 
     });
   });

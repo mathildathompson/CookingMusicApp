@@ -40,13 +40,16 @@
                 <h4>Comments:</h4>
                 <h5>View more comments</h5>
                 <% @recipe.comments.each_with_index do |comment, i| %>
-                <%binding.pry %>
-                <%= render comment %>
+                <%#binding.pry %>
+                <%#= render comment, i %>
+                <%= render :template => "comments/_comment", :locals => { :comment => comment, :i => i } %>
                    <% end %>
+
               </div>
 
               <div class='form'>
-              <%= render :partial => 'comments/form', :locals => { :recipe => @recipe } %>
+              <%= 
+              render :partial => 'comments/form', :locals => { :recipe => @recipe } %>
               </div>
 
               </div>
