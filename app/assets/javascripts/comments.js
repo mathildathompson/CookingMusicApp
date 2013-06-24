@@ -8,10 +8,16 @@ $('body').bind('ajax:success', function(e, cool_beans) {
     console.log(cool_beans);
      // alert($('<div>').append(cool_beans).children().children('h5').html());
      var comment = $('<div>').append(cool_beans).children().children('h5').html();
+    $('#comment_body').val('');
     var new_comment = $('<div>').append(cool_beans).children().data("item-id");
     // alert('.comments' + new_comment);
     $('.comments' + new_comment).append(cool_beans);
       });
 
+$('.comment').hide();
+$('#commentsbox h5').click(function(){
+    $('.comment').slideToggle('slow', function(){
 
+    });
+  });
 });

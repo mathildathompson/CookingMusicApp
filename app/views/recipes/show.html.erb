@@ -38,7 +38,9 @@
 
               <div id="commentsbox" class="comments<%=@recipe.id%>">
                 <h4>Comments:</h4>
-                <% @recipe.comments.each do |comment| %>
+                <h5>View more comments</h5>
+                <% @recipe.comments.each_with_index do |comment, i| %>
+                <%binding.pry %>
                 <%= render comment %>
                    <% end %>
               </div>
