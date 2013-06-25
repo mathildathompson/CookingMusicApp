@@ -1,32 +1,32 @@
 <!-- <div class='cookingwithmusic'>
   <h1>Cooking With Music</h1>
 </div> -->
-    <div class='navigation'>
-      <h2> COOKING WITH MUSIC </h2>
-    </div>
+<div class='navigation'>
+  <h2> COOKING WITH MUSIC </h2>
+</div>
 
-    <div class='catchphrase'>
-       <h4>SEARCH FOR RECIPES WITH HANDPICKED PLAYLISTS</h4>
-    </div>
+<div class='catchphrase'>
+ <h4>SEARCH FOR RECIPES WITH HANDPICKED PLAYLISTS</h4>
+</div>
 
-    <div class='chooseacuisine'>
-       <h3>CHOOSE A CUISINE</h3>
-    </div>
-   
-    <div class="index">
+<div class='chooseacuisine'>
+ <h3>CHOOSE A CUISINE</h3>
+</div>
 
-          <% @categories.each do |a| %>
-                <div class='categorynames'>
-                  <%= link_to a.name.upcase, category_recipes_path(a.id), :class => 'categorynames'%>
-                </div>
-      <%#= link_to 'Edit', edit_category_path(a) %>
-      <%#= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <%end%>
-    <div/>
+<div class="index">
+
+  <% @categories.each do |a| %>
+  <div class='categorynames'>
+    <%= link_to a.name.upcase, category_recipes_path(a.id), :class => 'categorynames'%>
+  </div>
+  <%#= link_to 'Edit', edit_category_path(a) %>
+  <%#= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%end%>
+<div/>
 
 
-  <div class='orbit carosel' style="width:250px;">
-    <ul data-orbit>
+<div class='orbit carosel' style="width:250px;">
+  <ul data-orbit>
     <li>
       <%= image_tag('bowl.jpg') %>
       <div class="orbit-caption">...</div>
@@ -39,13 +39,13 @@
       <%= image_tag('macaroon.jpg') %>
       <div class="orbit-caption">...</div>
     </li>
-    </ul>
-  </div>
+  </ul>
+</div>
 
 
       
-     <!--  <img src="http://www.souschef.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/h/chilli-de-arbol.jpg"/>
- -->
+     
+ 
      <%#=link_to "Sign up", new_user_path %>
 
 

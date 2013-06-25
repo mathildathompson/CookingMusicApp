@@ -1,10 +1,8 @@
 <!-- <html style = "background-image:url('http://www.matthewsheartsofhope.org/images/blankBackground.jpg')";> -->
 
 <div class='navigation'>
-      <h2> COOKING WITH MUSIC </h2>
+  <h2> COOKING WITH MUSIC </h2>
 </div>
-
-<p id="notice"><%= notice %></p>
 
 <div class = "container">
 
@@ -21,6 +19,7 @@
     
     <%end%>
   </div>
+
   <div>
     <%= image_tag @recipe.image_url, :class => 'image'%>
   </div>
@@ -28,9 +27,9 @@
   <div class = "method">
     <h3>Method:</h3>
     <h5><%=@recipe.method%><h5>
-    </div>
+  </div>
 
-    <div id="commentsbox" class="comments<%=@recipe.id%>">
+  <div id="commentsbox" class="comments<%=@recipe.id%>">
       <h4>Comments:</h4>
       <% @recipe.comments.each do |comment| %>
       <%#binding.pry %>
@@ -38,15 +37,15 @@
       <%#= render :template => "comments/_comment", :locals => { :comment => comment, :i => i } %>
       <% end %>
 
-    </div>
+  </div>
 
-    <div class='form'>
+  <div class='form'>
       <%#= 
       render :partial => 'comments/form', :locals => { :recipe => @recipe } %>
-    </div>
-
   </div>
-</div>
+
+ </div>
+
 
 <div class = "float_right">
   <div class = "track">
@@ -56,7 +55,6 @@
     <% end %>
   </div>
 </div>
-
 
 </div>
 

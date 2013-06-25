@@ -1,5 +1,5 @@
- <div class='navigation'>
-      <h2> COOKING WITH MUSIC </h2>
+<div class='navigation'>
+  <h2> COOKING WITH MUSIC </h2>
 </div>
 
 <div class='choosearecipe'>
@@ -7,24 +7,24 @@
 </div>
 
 
- <div class = "choose">
-        <% @category.recipes.each do |recipe| %>
-        <tr>
-        <br>
-        <td><%= link_to recipe.name, category_recipe_path(recipe.category_id, recipe.id), :class => 'choose' %></td><br><br>
-        </br>
-       <!--  <td><%= recipe.method %></td> -->
-        
-        <td><%#= link_to 'Show', recipe %></td>
-        <td><%#= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%#= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <% end %>
+<div class = "choose">
+  <% @category.recipes.each do |recipe| %>
+  <tr>
+    <br>
+    <td><%= link_to recipe.name, category_recipe_path(recipe.category_id, recipe.id), :class => 'choose' %></td><br><br>
+    </br>
+  <!--  <td><%= recipe.method %></td> -->
 
-    <div class = "return">
-        <h4><%= link_to 'Back', categories_path %></h4>
+  <td><%#= link_to 'Show', recipe %></td>
+  <td><%#= link_to 'Edit', edit_recipe_path(recipe) %></td>
+  <td><%#= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</div>
 
-    </div>
+<div class = "return">
+  <h4><%= link_to 'Back', categories_path %></h4>
+</div>
 
 
 
