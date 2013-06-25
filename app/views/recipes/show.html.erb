@@ -1,73 +1,67 @@
 <!-- <html style = "background-image:url('http://www.matthewsheartsofhope.org/images/blankBackground.jpg')";> -->
 
-<div class='navbar'>
-      <div class='backbutton'>
-         <h4><%#= link_to 'Back', category_recipes_path(@category)%></h4>
-      </div>
-
-      <div class='cookingwithmusic'>
-        <h2> COOKING WITH MUSIC </h2>
-      </div>
+<div class='navigation'>
+      <h2> COOKING WITH MUSIC </h2>
 </div>
 
-    <p id="notice"><%= notice %></p>
-    
-    <div class = "container">
+<p id="notice"><%= notice %></p>
 
-       <div class = "float_left">
+<div class = "container">
 
-              <div class = "name">
-                <h2><%=@recipe.name%></h2>
-              </div>
+ <div class = "float_left">
 
-               <div class = "ingredient">
-                  <h5>Ingredients:</h5>
-                  <% @recipe.ingredients.each do |x| %>
-                    <li><%= x.name %></li>
-              
-                  <%end%>
-              </div>
-              <div>
-                <%= image_tag @recipe.image_url, :class => 'image'%>
-              </div>
-
-              <div class = "method">
-                    <h3>Method:</h3>
-                    <h5><%=@recipe.method%><h5>
-              </div>
-
-              <div id="commentsbox" class="comments<%=@recipe.id%>">
-                <!-- <h4>Comments:</h4> -->
-                <% @recipe.comments.each do |comment| %>
-                <%#binding.pry %>
-                <%#= render comment %>
-                <%#= render :template => "comments/_comment", :locals => { :comment => comment, :i => i } %>
-                   <% end %>
-
-              </div>
-
-              <div class='form'>
-              <%#= 
-              render :partial => 'comments/form', :locals => { :recipe => @recipe } %>
-              </div>
-
-              </div>
-        </div>
-
-        <div class = "float_right">
-          <div class = "track">
-              <h4>Recommended Playlist</h4>
-              <% @all_tracks_recipe.each do |track| %>
-              <br><%= track.sound_cloud_player.html_safe %></br>
-              <% end %>
-          </div>
-        </div>
-
-
+  <div class = "name">
+    <h2><%=@recipe.name%></h2>
   </div>
 
-
+  <div class = "ingredient">
+    <h5>Ingredients:</h5>
+    <% @recipe.ingredients.each do |x| %>
+    <li><%= x.name %></li>
     
+    <%end%>
+  </div>
+  <div>
+    <%= image_tag @recipe.image_url, :class => 'image'%>
+  </div>
+
+  <div class = "method">
+    <h3>Method:</h3>
+    <h5><%=@recipe.method%><h5>
+    </div>
+
+    <div id="commentsbox" class="comments<%=@recipe.id%>">
+      <h4>Comments:</h4>
+      <% @recipe.comments.each do |comment| %>
+      <%#binding.pry %>
+      <%#= render comment %>
+      <%#= render :template => "comments/_comment", :locals => { :comment => comment, :i => i } %>
+      <% end %>
+
+    </div>
+
+    <div class='form'>
+      <%#= 
+      render :partial => 'comments/form', :locals => { :recipe => @recipe } %>
+    </div>
+
+  </div>
+</div>
+
+<div class = "float_right">
+  <div class = "track">
+    <h4>Recommended Playlist</h4>
+    <% @all_tracks_recipe.each do |track| %>
+    <br><%= track.sound_cloud_player.html_safe %></br>
+    <% end %>
+  </div>
+</div>
+
+
+</div>
+
+
+
     <!-- <div>
       <b>Method:</b>
       <%#= @recipe.method %>
