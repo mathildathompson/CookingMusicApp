@@ -2,7 +2,7 @@
 
 <div class='navbar'>
       <div class='backbutton'>
-         <h4><%= link_to 'Back', category_recipes_path(@category)%></h4>
+         <h4><%#= link_to 'Back', category_recipes_path(@category)%></h4>
       </div>
 
       <div class='cookingwithmusic'>
@@ -37,18 +37,17 @@
               </div>
 
               <div id="commentsbox" class="comments<%=@recipe.id%>">
-                <h4>Comments:</h4>
-                <h5>View more comments</h5>
-                <% @recipe.comments.each_with_index do |comment, i| %>
+                <!-- <h4>Comments:</h4> -->
+                <% @recipe.comments.each do |comment| %>
                 <%#binding.pry %>
-                <%#= render comment, i %>
-                <%= render :template => "comments/_comment", :locals => { :comment => comment, :i => i } %>
+                <%#= render comment %>
+                <%#= render :template => "comments/_comment", :locals => { :comment => comment, :i => i } %>
                    <% end %>
 
               </div>
 
               <div class='form'>
-              <%= 
+              <%#= 
               render :partial => 'comments/form', :locals => { :recipe => @recipe } %>
               </div>
 

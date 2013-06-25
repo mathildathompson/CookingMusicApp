@@ -1,6 +1,6 @@
  <div class='navbar'>
       <div class='backbutton'>
-         <h4><%= link_to 'Back', categories_path%></h4>
+         <h4><%#= link_to 'Back', categories_path%></h4>
       </div>
 
       <div class='cookingwithmusic'>
@@ -17,7 +17,7 @@
         <% @category.recipes.each do |recipe| %>
         <tr>
         <br>
-        <td><%= link_to recipe.name, category_recipe_path(recipe.category_id, recipe.id), :class => 'choose' %></td>
+        <td><%= link_to recipe.name, category_recipe_path(recipe.category_id, recipe.id), :class => 'choose' %></td><br><br>
         </br>
        <!--  <td><%= recipe.method %></td> -->
         

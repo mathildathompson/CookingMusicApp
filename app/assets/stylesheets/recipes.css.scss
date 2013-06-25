@@ -14,54 +14,51 @@
 
 .container{
           clear:both;
-          }
+}
 
 .float_left{
            float:left;
            width:60%;
            margin-left: 70px;
-           }
+}
 
 .float_right{
           float:right;
           width:30%;
-           }
+}
 
 .choose {
 	    margin-top: 30px;
 	    font-color: grey;
       text-align: center;
-      font-size: 25px;
-        }
+      font-size: 40px;
+}
 
 iframe {
 	   clear: right;
        float: right;
       margin: 5px 25px 5px 0px;
       height:85px;
-      }
+}
 
 .name {
 	  height:12px;
 	  text-align: left;
     width: 600px;
     margin-bottom:40px;
-   
-    }
+}
 
 .name h2{
   font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
 }
 
-.ingredient
-    {
+.ingredient{
     text-align: left;
     width: 400px;
     font-size: 15px;
-    height: 250px;
+    height: 290px;
     float:left;
-     
-      h5{
+       h5{
        font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
       }
     }
@@ -72,16 +69,16 @@ img {
     border: 1px solid lightgrey;
     border-radius: 10px;
     // clear:both
-    }
+}
 
 #image{
     border: 2px black;
-      }
+}
 
 
 .return{
     margin-top: 500px
-       }
+}
 
 .return2{
        margin-top: 800px;
